@@ -5,6 +5,9 @@ include '../component/sidebar.php'
 solid #D40013; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
     <div class="body d-flex justify-content-between">
         <h4>LIST MOVIE</h4>
+        <a href="../page/addMoviesPage.php?id='.$data['id'].'" onClick="return confirm ( \'Tambah List Movie?\')"> 
+            <button class="btn"><i style="color: red"class="fa fa-plus fa-2x"></i></button>    
+        </a>
     </div>
     <hr>
     <table class="table ">
@@ -37,9 +40,15 @@ solid #D40013; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 
 <td>'.$data['season'].'</td>
 <td>'.$data['synopsis'].'</td>
 <td>
+<a href="../page/editMoviesPage.php?id='.$data['id'].'"> 
+<i style="color: red;" class="fa fa-pencil-square fa-2x"></i>
+</a>
+</td>
+<td>
 <a href="../process/deleteMovieProcess.php?id='.$data['id'].'" onClick="return confirm ( \'Are you sure want to delete this data?\')"> 
     <i style="color: red" class="fa fa-trash fa-2x"></i>
 </a>
+
 </td>
 </tr>';
                     $no++;

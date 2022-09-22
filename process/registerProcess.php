@@ -1,14 +1,6 @@
 <?php
-// untuk ngecek tombol yang namenya 'register' sudah di pencet atau belum
-// $_POST itu method di formnya
     if (isset($_POST['register'])) {
-    
-    // untuk mengoneksikan dengan database dengan memanggil file db.php
-    
     include('../db.php');
-    
-    // tampung nilai yang ada di from ke variabel
-    // sesuaikan variabel name yang ada di registerPage.php disetiap input
     
     $email = $_POST['email'];
     $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
@@ -16,8 +8,16 @@
     $phonenum = $_POST['phonenum'];
     $membership = $_POST['membership'];
     
-    // Melakukan insert ke databse dengan query dibawah ini
-    
+    $check=mysqli_query(
+        $con,
+        "SELECT * FROM users WHERE email='$email'");
+        if(mysqli_num_rows($check)>0){
+            echo
+            '<script>
+                alert("Email Sudah Digunakan");
+                window.location = "../page/registerPage.php"
+            </script>';
+        }
     $query = mysqli_query(
         $con,
         "INSERT INTO users(name,email,password,phonenum,membership) 
@@ -25,7 +25,6 @@
                 ('$name', '$email', '$password', '$phonenum', '$membership')"
             )
              or die(mysqli_error($con));
-            // perintah mysql yang gagal dijalankan ditangani oleh perintah “or die”
      if ($query) {
         echo
         '<script>

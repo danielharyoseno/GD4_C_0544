@@ -15,7 +15,6 @@ EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="a
 <body>
     <nav class="navbar navbar-dark bg-dark fixed-top">
         <div class="container">
-            <!-- Nama : nama panggilan kalian -->
             <a class="navbar-brand fw-bold" href="/gd4_c_0544">PHP - Daniel</a>
             <div class="d-flex justify-content-end">
                 <button class="btn btn-primary me-2" type="button">
@@ -35,7 +34,6 @@ EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="a
             </div>
         </div>
     </div>
-    <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
 </body>
